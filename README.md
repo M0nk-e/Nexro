@@ -1,99 +1,118 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Nexro - A Modern Discord Bot Built with NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Nexro is a cutting-edge Discord bot crafted with **NestJS**, focusing on modularity, scalability, and modern development practices. Designed for both casual users and advanced communities, Nexro is packed with features like chat-leveling, voice-leveling, and robust profile systems, with many more exciting functionalities coming soon!
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+## 🚀 Features
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### **Available Now**
+- **Chat-Leveling System**: 
+  - Tracks and calculates users’ activity within text channels.
+  - Provides user-specific levels and experience points (XP).
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+### **Coming Soon**
+- **Voice-Leveling System** *(Next Minor Update)*: 
+  - Calculates levels based on user activity in voice channels.
+  - Rewards users for spending time in voice chats.
 
-## Compile and run the project
+- **Profile and Balance System** *(Upcoming Update)*:
+  - Comprehensive user profiles with customizable stats.
+  - Track and manage virtual currency within your server.
 
-```bash
-# development
-$ npm run start
+- **Global and Guild-Based Levels** *(Future Updates)*:
+  - Option to calculate levels globally across all servers.
+  - Guild-specific leaderboards and levels for a localized experience.
 
-# watch mode
-$ npm run start:dev
+- **Utility Commands** *(Future Updates)*:
+  - A variety of commands to aid server management and enhance user experience.
+  - Stay tuned for announcements!
 
-# production mode
-$ npm run start:prod
-```
+- **Moderator Commands** *(Version 2.5.0)*:
+  - Powerful tools for server admins and moderators.
+  - Commands for moderation, user management, and more.
 
-## Run tests
+---
 
-```bash
-# unit tests
-$ npm run test
+## 📈 Development Roadmap
 
-# e2e tests
-$ npm run test:e2e
+### **Versioning Philosophy**
+Nexro follows **semantic versioning**:
+1. **Major Versions (e.g., 2.0.0)**:
+   - Introduce significant new features and functionality.
+   - Example: Adding a new system like **moderation commands** or **global leveling**.
 
-# test coverage
-$ npm run test:cov
-```
+2. **Minor Versions (e.g., 1.1.0)**:
+   - Small upgrades to existing commands and features.
+   - Example: Enhancing the chat-leveling system with additional rewards or adding support for voice-leveling.
 
-## Deployment
+3. **Patch Versions (e.g., 1.0.1)**:
+   - Bug fixes and minor tweaks to improve stability and performance.
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+---
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### **Current Version: 1.0.0**
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+#### **What's Included:**
+- **Chat-Leveling System**:
+  - Fully functional text-based leveling system.
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+### **Planned Updates**
 
-Check out a few resources that may come in handy when working with NestJS:
+#### **Version 1.1.0**
+- **Voice-Leveling Beta**: Voice activity tracking goes live.
+- Minor upgrades to chat-leveling functionality.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+#### **Version 1.2.0**
+- **Profile System**: Users can view and manage their profiles.
+- **Balance System**: Introduces virtual currency tracking.
 
-## Support
+#### **Version 1.3.0**
+- **Global Levels**: Adds support for global leaderboards.
+- **Utility Commands**: First batch of utility commands.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+#### **Version 2.0.0**
+- Major overhaul and new features:
+  - Fully integrated **Global and Guild-Based Leveling Systems**.
+  - Enhanced profile and balance systems.
 
-## Stay in touch
+#### **Version 2.5.0**
+- **Moderator Commands**: A dedicated suite of tools for server admins and moderators.
+- Example commands: kick, ban, mute, warn, and more.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 🛠️ Built With
+- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **TypeScript**: Ensures type safety and modern development practices.
+- **Discord.js**: A powerful library for interacting with the Discord API.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+---
+
+## 🤝 Contributing
+We welcome contributions! If you'd like to contribute to Nexro, follow the steps below:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bugfix (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+---
+
+## 📜 License
+Nexro is open-source and distributed under the [MIT License](LICENSE). Feel free to modify and use the bot as per the license terms.
+
+---
+
+## 💬 Community and Support
+- **Discord Server**: Coming soon!
+- **GitHub Issues**: Found a bug or have a feature request? Open an issue [here](https://github.com/your-repository/nexro/issues).
+
+---
+
+Stay tuned for updates, and thank you for your interest in **Nexro**!
