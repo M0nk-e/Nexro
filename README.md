@@ -1,4 +1,7 @@
 # Nexro - A Modern Discord Bot Built with NestJS
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c8ed51bf-33f2-4f99-a51a-05c27f69f691" alt="Nexro Logo" />
+</p>
 
 Nexro is a cutting-edge Discord bot crafted with **NestJS**, focusing on modularity, scalability, and modern development practices. Designed for both casual users and advanced communities, Nexro is packed with features like chat-leveling, voice-leveling, and robust profile systems, with many more exciting functionalities coming soon!
 
@@ -111,7 +114,7 @@ Nexro is open-source and distributed under the [MIT License](LICENSE). Feel free
 
 ## 💬 Community and Support
 - **Discord Server**: Coming soon!
-- **GitHub Issues**: Found a bug or have a feature request? Open an issue [here](https://github.com/your-repository/nexro/issues).
+- **GitHub Issues**: Found a bug or have a feature request? Open an issue [here](https://github.com/M0nk-e/nexro/issues).
 
 ---
 
