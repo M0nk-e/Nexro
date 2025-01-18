@@ -12,4 +12,5 @@ export class PingCommand {
   async onPing(@Context() [interaction]: [CommandInteraction]) {
     return interaction.reply('Pong!');
   }
+
 }

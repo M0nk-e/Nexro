@@ -2,9 +2,8 @@
   "name": "nexro",
   "version": "1.0.0",
   "description": "Nest.js Discord bot. Modular and modern.",
-  "author": "Monke",
-  "private": true,
-  "license": "GPL-3.0-only",
+  "author": "M0nk-e",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -20,6 +19,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@monke/necord": "file:C:\\Users\\Kopi\\Documents\\dev\\necord",
+    "@necord/pagination": "^2.0.0",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.3.0",
     "@nestjs/core": "^10.0.0",

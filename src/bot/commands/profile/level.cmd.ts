@@ -1,11 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { SlashCommand, Context, Options } from 'necord';
-import { LevelchatService } from '../Functions/chat_level/levelchat.service';
-import { CommandInteraction } from 'discord.js';
+import { LevelchatService } from '../../Functions/chat_level/levelchat.service';
+import { Client, CommandInteraction } from 'discord.js';
+import { createEmbed } from 'src/common/utils/global.embed';
 
 @Injectable()
 export class LevelCommand {
-  constructor(private readonly levelchatService: LevelchatService) {}
+  constructor(
+    private readonly levelchatService: LevelchatService,
+    private readonly client: Client
+  ) { }
 
   @SlashCommand({
     name: 'level',
@@ -21,8 +25,9 @@ export class LevelCommand {
     }
 
     const { level, xp } = userLevelInfo;
-    return interaction.reply(
-      `You are currently at level ${level} with ${xp} XP.`,
-    );
+    const embed = createEmbed('Your Level and XP', `You are currently at level ${level} with ${xp} XP.`, this.client.user.avatarURL() || '');
+
+
+    return interaction.reply({ embeds: [embed] });
   }
 }
