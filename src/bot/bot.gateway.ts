@@ -7,6 +7,11 @@ export class BotGateway implements OnModuleInit {
     console.log('BotGateway initialized');
   }
 
+  @On('ready')
+  onReady() {
+    console.log('Bot is ready!');
+  }
+
   @On('shardDisconnect')
   onShardDisconnect() {
     console.log('Bot has disconnected');

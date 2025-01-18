@@ -11,7 +11,7 @@ export class DatabaseService {
       await this.connection.query('SELECT 1');
       console.log('Database connection is successful');
       return true;
-    } catch (error) {
+    } catch {
       console.log('Database connection failed');
       return false;
     }

@@ -1,8 +1,9 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import { User } from './user.entity';
+import { IWallet } from 'src/interfaces/wallet';
 
 @Entity()
-export class Wallet {
+export class Wallet implements IWallet {
   @PrimaryGeneratedColumn()
   id: number;
 

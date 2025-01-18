@@ -67,9 +67,7 @@ export class LevelchatService {
     }
   }
 
-  async getUserLevelInfo(
-    userId: string,
-  ): Promise<{ level: number; xp: number } | null> {
+  async getUserLevelInfo(userId: string): Promise<{ level: number; xp: number } | null> {
     const user = await this.userRepository.findOne({
       where: { discordId: userId },
     });

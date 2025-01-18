@@ -1,9 +1,12 @@
-import { SlashCommand, Context, Options } from 'necord';
+import { SlashCommand, Context } from 'necord';
 import { Injectable } from '@nestjs/common';
 import { CommandInteraction } from 'discord.js';
+import { ICommand } from 'src/interfaces';
 
 @Injectable()
-export class PingCommand {
+export class PingCommand implements ICommand {
+  name: 'ping';
+  description: 'Replies with Pong!';
   @SlashCommand({
     name: 'ping',
     description: 'Replies with Pong!',
@@ -12,5 +15,4 @@ export class PingCommand {
   async onPing(@Context() [interaction]: [CommandInteraction]) {
     return interaction.reply('Pong!');
   }
-
 }

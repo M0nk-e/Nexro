@@ -19,7 +19,7 @@ const cardDirectories: { [key in CardRarity]: string } = {
 
 const dropRates: { [key in CardRarity]: number } = {
   common: 0.6, // 60% chance
-  rare: 0.25,  // 25% chance
+  rare: 0.25, // 25% chance
   mythic: 0.1, // 10% chance
   legendary: 0.04, // 4% chance
   galactic: 0.01, // 1% chance

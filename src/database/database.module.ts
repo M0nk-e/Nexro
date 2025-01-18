@@ -8,6 +8,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
 import { Wallet } from './entities/wallet.entity';
+import { Marriage } from './entities/marriage.entity';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import { Wallet } from './entities/wallet.entity';
         ssl: {
           rejectUnauthorized: false,
         },
-        entities: [User, Wallet],
+        entities: [User, Wallet, Marriage],
         synchronize: true,
         autoLoadEntities: true,
       }),

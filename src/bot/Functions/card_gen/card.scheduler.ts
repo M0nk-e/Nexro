@@ -23,13 +23,12 @@ export class CardScheduler {
     const channel = this.client.channels.cache.get(this.channelId) as TextChannel;
 
     if (channel) {
-      const row = new ActionRowBuilder<ButtonBuilder>()
-        .addComponents(
-          new ButtonBuilder()
-            .setCustomId(`claim_card/${card.name}`)
-            .setLabel('Claim Card')
-            .setStyle(ButtonStyle.Primary),
-        );
+      const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
+        new ButtonBuilder()
+          .setCustomId(`claim_card/${card.name}`)
+          .setLabel('Claim Card')
+          .setStyle(ButtonStyle.Primary),
+      );
 
       await channel.send({
         content: `A ${card.rarity} card has spawned: ${card.name}`,

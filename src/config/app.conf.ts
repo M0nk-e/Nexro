@@ -1,5 +1,5 @@
 export const AppConf = () => ({
-  Disocrd_Token: process.env.DISCORD_TOKEN,
+  Discord_Token: process.env.DISCORD_TOKEN,
   Dev_Guild: process.env.DEV_GUILD,
   Database_Url: process.env.DATABASE_URL,
   Redis_Host: process.env.REDIS_HOST,

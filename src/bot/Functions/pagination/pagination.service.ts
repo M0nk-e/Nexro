@@ -1,52 +1,67 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { NecordPaginationService, PageBuilder } from '@necord/pagination';
-import { readdirSync, statSync } from 'fs';
-import { join } from 'path';
+import { createEmbed } from 'src/common/utils/global.embed';
 
 @Injectable()
 export class PaginationService implements OnModuleInit {
-    constructor(private readonly paginationService: NecordPaginationService) { }
+  constructor(private readonly paginationService: NecordPaginationService) {}
 
-    onModuleInit(): void {
-        const commandCategories = this.getCommandCategories();
-        const pages = commandCategories.map((category) =>
-            new PageBuilder().setContent(this.formatCategory(category))
-        );
+  async onModuleInit(): Promise<void> {
+    try {
+      const commandCategories = this.getCommandCategories();
+      const pages = commandCategories.map((category) => {
+        const description = this.formatCategory(category);
+        console.log('Category:', category.category); // Debugging information
+        console.log('Description:', description); // Debugging information
+        return new PageBuilder().setEmbeds([
+          createEmbed(category.category, description, 'https://placeholder.com/icon.png'),
+        ]);
+      });
 
-        this.paginationService.register((builder) =>
-            builder
-                .setCustomId('help')
-                .setPages(pages)
-        );
+      this.paginationService.register((builder) => builder.setCustomId('help').setPages(pages));
+    } catch (error) {
+      console.error('Error initializing pagination service:', error);
     }
+  }
 
-    public get(customId: string) {
-        return this.paginationService.get(customId);
-    }
+  public get(customId: string) {
+    return this.paginationService.get(customId);
+  }
 
-    private getCommandCategories() {
-        const commandDir = join(__dirname, '../../commands'); // Update the path to the correct directory
-        const categories = readdirSync(commandDir)
-            .filter((folder) => statSync(join(commandDir, folder)).isDirectory()) // Ensure the item is a directory
-            .map((folder) => {
-                const commands = readdirSync(join(commandDir, folder))
-                    .filter((file) => file.endsWith('.js')) // Ensure only JavaScript files are processed
-                    .map((file) => {
-                        const command = require(join(commandDir, folder, file));
-                        return {
-                            name: command.name || file.replace('.js', ''),
-                            description: command.description || 'No description available',
-                        };
-                    });
-                return { category: folder, commands };
-            });
-        return categories;
-    }
+  private getCommandCategories() {
+    return [
+      {
+        category: 'Core',
+        commands: [{ name: 'help', description: 'Displays help information' }],
+      },
+      {
+        category: 'Utility',
+        commands: [{ name: 'ping', description: 'Replies with Pong!' }],
+      },
+      {
+        category: 'Profile',
+        commands: [{ name: 'level', description: 'Displays your level' }],
+      },
+      {
+        category: 'Marriage',
+        commands: [
+          { name: 'marry', description: 'Propose to another user' },
+          { name: 'divorce', description: 'Divorce your partner' },
+          { name: 'adopt', description: 'Adopt a child' },
+          { name: 'family', description: 'View your family' },
+          { name: 'vow', description: 'Renew your vows' },
+        ],
+      },
+    ];
+  }
 
-    private formatCategory(category: { category: string; commands: any[] }) {
-        const commandList = category.commands
-            .map((cmd) => `**${cmd.name}**: ${cmd.description}`)
-            .join('\n');
-        return `**${category.category}**\n${commandList}`;
-    }
+  private formatCategory(category: {
+    category: string;
+    commands: { name: string; description: string }[];
+  }) {
+    const commandList = category.commands
+      .map((cmd) => `**${cmd.name}**: ${cmd.description}`)
+      .join('\n');
+    return commandList;
+  }
 }

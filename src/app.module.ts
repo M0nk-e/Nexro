@@ -1,3 +1,5 @@
+import { AdoptModule } from './bot/Functions/family/adopt/adopt.module';
+import { MarriageModule } from './bot/Functions/family/marriage/marriage.module';
 import { PaginationModule } from './bot/Functions/pagination/pagination.module';
 
 import { Module } from '@nestjs/common';
@@ -10,6 +12,8 @@ import { NecordPaginationModule } from '@necord/pagination';
 
 @Module({
   imports: [
+    AdoptModule,
+    MarriageModule,
     PaginationModule,
 
     ConfigModule.forRoot({
@@ -27,4 +31,4 @@ import { NecordPaginationModule } from '@necord/pagination';
     DatabaseModule,
   ],
 })
-export class AppModule { }
+export class AppModule {}

@@ -7,9 +7,7 @@ export class MessagesEvent {
   constructor(private readonly levelchatService: LevelchatService) {}
 
   @On('messageCreate')
-  public async onMessageCreate(
-    @Context() [message]: ContextOf<'messageCreate'>,
-  ) {
+  public async onMessageCreate(@Context() [message]: ContextOf<'messageCreate'>) {
     if (message.author.bot) return;
 
     console.log(`Message from ${message.author.tag}: ${message.content}`);
