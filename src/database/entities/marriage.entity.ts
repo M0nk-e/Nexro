@@ -35,8 +35,8 @@ export class Marriage {
   @Column({ default: 0 })
   vowStreak: number;
 
-  @Column({ default: 0 })
-  vowCooldown: number;
+  @Column({ nullable: true })
+  lastVow: Date;
 
   @Column()
   marriedAt: Date;

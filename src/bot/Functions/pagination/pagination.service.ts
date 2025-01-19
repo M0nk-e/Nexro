@@ -4,15 +4,13 @@ import { createEmbed } from 'src/common/utils/global.embed';
 
 @Injectable()
 export class PaginationService implements OnModuleInit {
-  constructor(private readonly paginationService: NecordPaginationService) {}
+  constructor(private readonly paginationService: NecordPaginationService) { }
 
   async onModuleInit(): Promise<void> {
     try {
       const commandCategories = this.getCommandCategories();
       const pages = commandCategories.map((category) => {
         const description = this.formatCategory(category);
-        console.log('Category:', category.category); // Debugging information
-        console.log('Description:', description); // Debugging information
         return new PageBuilder().setEmbeds([
           createEmbed(category.category, description, 'https://placeholder.com/icon.png'),
         ]);

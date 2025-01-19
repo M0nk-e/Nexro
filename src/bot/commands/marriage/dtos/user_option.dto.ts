@@ -4,7 +4,7 @@ import { UserOption } from 'necord';
 export class UserOptionDto {
   @UserOption({
     name: 'user',
-    description: 'user to marry',
+    description: 'mention the user you want to use this command with',
     required: true,
   })
   user: User;

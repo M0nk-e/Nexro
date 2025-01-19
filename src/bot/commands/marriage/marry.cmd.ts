@@ -6,14 +6,14 @@ import {
   ButtonStyle,
   MessageComponentInteraction,
 } from 'discord.js';
-import { MarriageService } from 'src/bot/Functions/family/marriage/marriage.service';
-import { createEmbed } from 'src/common/utils/global.embed';
-import { UserOptionDto } from './dtos/user_option.dto';
+import { MarriageService } from 'src/bot/Functions';
+import { createEmbed } from 'src/common';
+import { UserOptionDto } from './dtos';
 import { ICommand } from 'src/interfaces';
 
 @Injectable()
 export class MarryCommand implements ICommand {
-  constructor(private readonly marriageService: MarriageService) {}
+  constructor(private readonly marriageService: MarriageService) { }
   name: string;
   description: string;
 
